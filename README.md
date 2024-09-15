@@ -25,3 +25,4 @@ We seek to travel not to be tourists, but to be adventures! Sadly, whenever you 
 - DB/Login: This will store user data, post data, the ability for users to login, destination data.
 - WebSocket: When a user posts their written text “experience” that post is then made available for each other user to see. Creates a peer-to-peer relationship between client “posts”. Allows multiple user to receive live updates from other posts.
 
+![Startup](https://github.com/user-attachments/assets/f757198a-728f-4376-9112-992709c54a9d)
