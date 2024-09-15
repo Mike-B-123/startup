@@ -11,14 +11,15 @@ Key Features:
   -	Ability for Admin to create and delete user entries
     
 Technologies:
-    - HTML – Four navigable HTML pages. One for login, one home page, one destination, and one for “My List”. Hyperlinks to specific pages. This will provide the overall structure for the application.
-    - CSS – Will use for styling purposes making sure the website is more accessible and pleasing. In addition, will help me define where elements are on application.
-    - React – React will help with login credentials and seeing other user’s “experience” posts. Will be used for the overall functionality of the application: navigating different pages of the site, submitting posts, and saving posts.
-    - Service - Backend service will process client requests and send to database including:
-      o	login
-      o	Saving Destinations
-      o	Fetching Data (such as posts) from Database
-      o	Authentication for Login
-      o	Submitting posts to database
-    -	DB/Login – This will store user data, post data, the ability for users to login, destination data.
-    - WebSocket – When a user posts their written text “experience” that post is then made available for each other user to see. Creates a peer-to-peer relationship between client “posts”. Allows multiple user to receive live updates from other posts.
+    
+    - HTML: Four navigable HTML pages. One for login, one home page, one destination, and one for “My List”. Hyperlinks to specific pages. This will provide the overall structure for the application.
+    - CSS: Will use for styling purposes making sure the website is more accessible and pleasing. In addition, will help me define where elements are on application.
+    - React: React will help with login credentials and seeing other user’s “experience” posts. Will be used for the overall functionality of the application: navigating different pages of the site, submitting posts, and saving posts.
+    - Service: Backend service will process client requests and send to database including:
+      o login
+      o Saving Destinations
+      o Fetching Data (such as posts) from Database
+      o Authentication for Login
+      o Submitting posts to database
+    - DB/Login: This will store user data, post data, the ability for users to login, destination data.
+    - WebSocket: When a user posts their written text “experience” that post is then made available for each other user to see. Creates a peer-to-peer relationship between client “posts”. Allows multiple user to receive live updates from other posts.
