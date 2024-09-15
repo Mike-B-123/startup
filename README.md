@@ -17,11 +17,11 @@ We seek to travel not to be tourists, but to be adventurers! Sadly, whenever you
 - CSS: Will use for styling purposes making sure the website is more accessible, has color contrast, fits different screen sizes, etc. In addition, will help me define where elements are on application.
 - React: React will help with login credentials and seeing other user’s “experience” posts. Will be used for the overall functionality of the application: navigating different pages of the site, submitting posts, and saving posts.
 - Service: Backend service will process client requests and send to database including:
-  o Login
-  o Saving destinations
-  o Fetching Data (such as posts) from database
-  o Authentication for login
-  o Submitting posts to database
+  - Login
+  - Saving destinations
+  - Fetching Data (such as posts) from database
+  - Authentication for login
+  - Submitting posts to database
 - DB/Login: This will store user data, post data, and destination data. In addition, it will allow users to login.
 - WebSocket: When a user posts their written "experience" text that post is then made available for each other user to see. Creates a peer-to-peer relationship between client posts. Allows multiple user to receive live updates from other posts.
 
