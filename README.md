@@ -30,10 +30,11 @@ We seek to travel not to be tourists, but to be *adventurers*! Sadly, whenever y
 ## HTML deliverable:
 
 For this deliverable I built out the structure of my application using HTML.
-- **HTML pages** - I created 6 HTML pages that represent the ability to login, naviagate to my list page to save destinations, "Destinations" page to see all destinations with clickable links, Recommendation page with recommended pages and clickable link, and two actual destsination pages that allow you to post and see posts from other users about the destination.
-- **Third Party Services** - I put a place holder on each countr page where I will addy a third party service that generates adventure quotes and travel recommendations, so there is always fresh content on the page.
-- **Links** - The login page links to Destinations, My List, and Recommendations. All other pages link to Main Menu (login page), Destinations and Recommendations pages.
+- **HTML pages** - I created 6 HTML pages that represent the ability to login, naviagate to "My List" page to save destinations, "Destinations" page to see all countries with clickable links, "Recommendation" page with recommended countries and clickable links, and two actual country pages that allow you to post and see posts from other users about the country.
+- **Third Party Services** - I put a place holder on each country page where I will add a third party service that generates adventure quotes and travel recommendations, so there is always fresh content on the page.
+- **Links** - The login page links to Destinations, My List, and Recommendations. All other pages link to Main Menu (login page), Destinations, and Recommendations pages.
 - **Text** - Each page has a textual description of what the page does.
+- **HTML Tags** I used HTML tags including BODY, NAV, MAIN, HEADER, FOOTER on nearly every page.
 - **Images** - Almost every page has an image of a destination, user icon, and the mascot Atlas (a dog image).
 - **DB/Login** - Input box and submit button for login. The user icon represent data pulled from the database, since it pulls the client's user name and displays it.
-- **WebSocket** - On each destination page there is a text box where the user can post a text entry to the server that then every other user on that webpage can see.
+- **WebSocket** - On each destination page there is a text box where the user can post a text entry to the server that then every other user on that country page can see.
