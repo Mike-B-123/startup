@@ -30,7 +30,8 @@ We seek to travel not to be tourists, but to be *adventurers*! Sadly, whenever y
 ## HTML deliverable:
 
 For this deliverable I built out the structure of my application using HTML.
-- **HTML pages** - I created 6 HTML pages that represent the ability to login, naviagate to my list page to save destinations, "Destinations" page to see all destinations with clickable links, Recommendation page with recommended pages and clickable link, and two actual destination pages that allow you to post and see posts from other users about the destination.
+- **HTML pages** - I created 6 HTML pages that represent the ability to login, naviagate to my list page to save destinations, "Destinations" page to see all destinations with clickable links, Recommendation page with recommended pages and clickable link, and two actual destsination pages that allow you to post and see posts from other users about the destination.
+- **Third Party Services** - I put a place holder on each countr page where I will addy a third party service that generates adventure quotes and travel recommendations, so there is always fresh content on the page.
 - **Links** - The login page links to Destinations, My List, and Recommendations. All other pages link to Main Menu (login page), Destinations and Recommendations pages.
 - **Text** - Each page has a textual description of what the page does.
 - **Images** - Almost every page has an image of a destination, user icon, and the mascot Atlas (a dog image).
