@@ -26,3 +26,13 @@ We seek to travel not to be tourists, but to be *adventurers*! Sadly, whenever y
 - **WebSocke**t: When a user posts their written "experience" text that post is then made available for each other user to see. Creates a peer-to-peer relationship between client posts. Allows multiple user to receive live updates from other posts.
 
 ![Startup](https://github.com/user-attachments/assets/f757198a-728f-4376-9112-992709c54a9d)
+
+## HTML deliverable:
+
+For this deliverable I built out the structure of my application using HTML.
+- **HTML pages** - I created 6 HTML pages that represent the ability to login, naviagate to my list page to save destinations, "Destinations" page to see all destinations with clickable links, Recommendation page with recommended pages and clickable link, and two actual destination pages that allow you to post and see posts from other users about the destination.
+- **Links** - The login page links to Destinations, My List, and Recommendations. All other pages link to Main Menu (login page), Destinations and Recommendations pages.
+- **Text** - Each page has a textual description of what the page does.
+- **Images** - Almost every page has an image of a destination, user icon, and the mascot Atlas (a dog image).
+- **DB/Login** - Input box and submit button for login. The user icon represent data pulled from the database, since it pulls the client's user name and displays it.
+- **WebSocket** - On each destination page there is a text box where the user can post a text entry to the server that then every other user on that webpage can see.
