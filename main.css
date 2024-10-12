@@ -6,6 +6,8 @@ body {
   }
   
   header {
+    background-color: #7E8C54;
+    color: white;
     flex: 0 80px;
   }
   
@@ -26,6 +28,8 @@ body {
   }
   
   footer {
+    background-color: #7E8C54;
+    color: white;
     flex: 0 30px;
   }
   
