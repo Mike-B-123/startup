@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head class="bg-dark text-light">
     <meta charset="UTF-8" />
     <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Buckelist</title>
+    <title>Destinations</title> 
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="about.css" />
+
+    <!-- Include bootstrap CSS framework -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <!-- Use header, main, and footer elements to give semantic structure -->
@@ -28,19 +38,12 @@
       <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
       <hr />
 
-    <footer>
-      <nav>
-        <menu>
-        <h4>Naviagtion Menu</h4>
-        <li><a href="index.html">Main Menu</a></li>
-          <li><a href="Destinations.html">Destinations</a></li>
-          <li><a href="recommended.html">Recommendations</a></li>
-        </menu>
-      </nav>
-      <hr />
-      <span class="text-reset">Mick Buck</span>
-      <br />
-      <a href="https://github.com/Mike-B-123/startup">GitHub</a>
-    </footer>
+      <footer class="bg-dark text-white-50">
+        <div class="container-fluid">
+        <hr />
+        <span class="text-reset">Mick Buck</span>
+        <br />
+        <a href="https://github.com/Mike-B-123/startup">GitHub</a>
+      </footer>
   </body>
 </html>
