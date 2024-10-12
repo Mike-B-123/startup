@@ -27,9 +27,10 @@ We seek to travel not to be tourists, but to be *adventurers*! Sadly, whenever y
 
 ![Startup](https://github.com/user-attachments/assets/f757198a-728f-4376-9112-992709c54a9d)
 
-## HTML deliverable:
+## HTML Deliverable:
 
 For this deliverable I built out the structure of my application using HTML.
+
 - **HTML pages** - I created 6 HTML pages that represent the ability to login, naviagate to "My List" page to save destinations, "Destinations" page to see all countries with clickable links, "Recommendation" page with recommended countries and clickable links, and two actual country pages that allow you to post and see posts from other users about the country.
 - **Third Party Services** - I put a place holder on each country page where I will add a third party service that generates adventure quotes and travel recommendations, so there is always fresh content on the page.
 - **Links** - The login page links to Destinations, My List, and Recommendations. All other pages link to Main Menu (login page), Destinations, and Recommendations pages.
@@ -38,3 +39,14 @@ For this deliverable I built out the structure of my application using HTML.
 - **Images** - Almost every page has an image of a destination, user icon, and the mascot Atlas (a dog image).
 - **DB/Login** - Input box and submit button for login. The user icon represent data pulled from the database, since it pulls the client's user name and displays it.
 - **WebSocket** - On each destination page there is a text box where the user can post a text entry to the server that then every other user on that country page can see.
+
+## CSS Deliverable:
+
+For this deliverable I properly styled the application with CSS into its final appearance.
+
+ - **Sectioning** - Header, footer, and main content body all have appropriate styling (background color, contrast between section, correct spacing)
+ - **Resizing** - My website is able to resize across different screen sizes.
+ - **Navigation elements** - Properly formatted navigation links in header and made the current pages link highlighted.
+ - **Application text content** - Consistent fonts, and text coloring that contrasts background.
+ - **Application images** - Used thumbnail styling for clickable images and used rounded borders for non-clickable images.
+ - **Application elements** - Used good contrast and whitespace
