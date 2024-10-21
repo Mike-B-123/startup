@@ -13,7 +13,7 @@ To Deploy when the deploy file is not in the same file as the pem key do the fol
 2. Also make sure to use the Go live extenstion to text your code as you go instead of using just code pen (after every go live you will need to close the 500 port)
 
 Midterm Review:
-In the following code, what does the link element do?
+- In the following code, what does the link element do?
 - 
 In the following code,  what does a div tag do?
 - The div tag in HTML is a container that is used to group other HTML elements together and apply styles to them as a unit
