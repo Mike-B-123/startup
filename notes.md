@@ -79,13 +79,13 @@ button.addEventListener('click', function() {
 **By default, the HTML span element has a default CSS display property value of:**
   -
 **How would you use CSS to change all the div elements to have a background color of red?**
-  - <div class="example">
+  - "<div class="example">
    <p>This is some CTA text.</p>
    <button>Click me</button>
 </div>
 - .example {
    background-color: lightblue;
-}
+}"
 **How would you display an image with a hyperlink in HTML?**
   - 
 **In the CSS box model, what is the ordering of the box layers starting at the inside and working out?**
