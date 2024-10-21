@@ -21,14 +21,16 @@ To Deploy when the deploy file is not in the same file as the pem key do the fol
   
 **In the following code, what is the difference between the #title and .grid selector?**
 -  title bar on a selector can help identify the selector or provide instructions for using it. For example, a title bar can indicate which Grid/Graph or panel stack the selector targets
--  A title bar on a Grid/Graph can help users identify an object on the document. It can also be used to minimize and maximize the Grid/Graph.
+- A title bar on a Grid/Graph can help users identify an object on the document. It can also be used to minimize and maximize the Grid/Graph.
+
 **In the following code, what is the difference between padding and margin?**
 - a margin is the space around an element's border, while padding is the space between an element's border and the element's content.
 
-it goes content -> padding -> Border -> Margin (FRom center to outer)
+it goes content -> padding -> Border -> Margin (From center to outer)
 
 **Given this HTML and this CSS how will the images be displayed using flex?**
-- ??
+- flex can help with sizing on screen. And help with structure between body, foot, and header. Also helps with direction such as column or rows.
+- We can create multiple rows in our website to seperate headers into different sections.
 
 **What does the following padding CSS do?**
 - create space around an element's content, inside of any defined borders
@@ -53,6 +55,7 @@ right and left paddings are 50px
 
 **What does the following code using map with an array output?**
 - The map() method of Array instances creates a new array populated with the results of calling a provided function on every element in the calling array.
+- we use arrow because it's convient, but a disadvantage is it's not a real function (look at scope module)??
 Ex: const array1 = [1, 4, 9, 16];
 
 // Pass a function to map
@@ -62,7 +65,9 @@ console.log(map1);
 // Expected output: Array [2, 8, 18, 32]
 
 **What does the following code output using getElementByID and addEventListener?**
-- In this example, we're getting the button element from the document using document.getElementById, and then calling addEventListener to add a 'click' event listener to the button. The second parameter is an anonymous function that will be executed when the 'click' event is detected on the button.
+- In this example, we're getting the button element from the document using document.getElementById, and then calling addEventListener to add a 'click' event listener to the button.
+- Event Listener: 
+-   The second parameter is an anonymous function that will be executed when the 'click' event is detected on the button.
   Ex: const button = document.getElementById('myButton');
 
 button.addEventListener('click', function() {
