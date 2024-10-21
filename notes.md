@@ -12,9 +12,9 @@ To Deploy when the deploy file is not in the same file as the pem key do the fol
 1. use this command in the terminal "./deployFiles.sh -k <yourpemkey> -h <yourdomain> -s startup" (or simon instead of startup)
 2. Also make sure to use the Go live extenstion to text your code as you go instead of using just code pen (after every go live you will need to close the 500 port)
 
-***Midterm Review:***
-**In the following code, what does the link element do?**
-- The link element allows authors to link their document to other resources. The destination of the link(s) is given by the href attribute, which must be present and must contain a valid non-empty URL potentially surrounded by spaces. A link element must have rel attribute.
+## Midterm Review:
+### In the following code, what does the link element do?
+- "<link href="main.css" rel="stylesheet" />" The link element allows authors to link their document to other resources. The destination of the link(s) is given by the href attribute, which must be present and must contain a valid non-empty URL potentially surrounded by spaces. A link element must have rel attribute.
   
 **In the following code,  what does a div tag do?**
 - The div tag in HTML is a container that is used to group other HTML elements together and apply styles to them as a unit
@@ -185,17 +185,17 @@ switch (day) {
 -To create a remote shell session in your terminal, use the "ssh" command followed by the username, "@" symbol, and the server address
 **Which of the following is true when the -la parameter is specified for the ls console command?**
 - Using ls -la gives a detailed, comprehensive list of all files, including hidden ones, with additional information like permissions, owner, size, and modification date.
-**Which of the following is true for the domain name banana.fruit.bozo.click, which is the top level domain, which is a subdomain, which is a root domain?**
-- Top-Level Domain (TLD): The last part of a domain name, like ".com", ".net", or ".org". 
-- Subdomain: A section within a domain, usually used to organize different parts of a website, like "blog.example.com" where "blog" is the subdomain. 
-- Root Domain: The main domain name combined with the top-level domain, like "example.com"
-## Is a web certificate is necessary to use HTTPS.
+### Which of the following is true for the domain name banana.fruit.bozo.click, which is the top level domain, which is a subdomain, which is a root domain?
+- **Top-Level Domain (TLD)**: The last part of a domain name, like ".com", ".net", or ".org". 
+- **Subdomain**: A section within a domain, usually used to organize different parts of a website, like "blog.example.com" where "blog" is the subdomain. 
+- **Root Domain**: The main domain name combined with the top-level domain, like "example.com"
+### Is a web certificate is necessary to use HTTPS.
 - Yes, a web certificate (also known as an SSL certificate) is absolutely necessary to use HTTPS; without it, you cannot enable the secure "HTTPS" protocol on your website, as the certificate is what allows for encryption of data transmitted between the website and the user, making it essential for secure communication online.
-## Can a DNS A record can point to an IP address or another A record.
+### Can a DNS A record can point to an IP address or another A record.
 - A DNS A record can only point to an IP address; it cannot point to another A record. The purpose of an A record is to map a domain name directly to an IP address, so its value is always an IP address
-## Port 443, 80, 22 is reserved for which protocol?**
+### Port 443, 80, 22 is reserved for which protocol?**
 -HTTP (80), HTTPS (443), FTP (21), SSH (22), and SMTP (25)
-## What will the following code using Promises output when executed?
+### What will the following code using Promises output when executed?
 - A promise in JavaScript is an object that represents the eventual completion or failure of an asynchronous operation. It is used for handling asynchronous operations, such as making API calls or reading files, in a more organized and readable way.
 - const promiseA = new Promise((resolve, reject) => {
   resolve(777);
