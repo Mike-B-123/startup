@@ -14,7 +14,7 @@ To Deploy when the deploy file is not in the same file as the pem key do the fol
 
 ## Midterm Review:
 ### In the following code, what does the link element do?
-- // <link href="main.css" rel="stylesheet" /> The link element allows authors to link their document to other resources. The destination of the link(s) is given by the href attribute, which must be present and must contain a valid non-empty URL potentially surrounded by spaces. A link element must have rel attribute.
+-  "<" link href="main.css" rel="stylesheet" /> The link element allows authors to link their document to other resources. The destination of the link(s) is given by the href attribute, which must be present and must contain a valid non-empty URL potentially surrounded by spaces. A link element must have rel attribute.
   
 **In the following code,  what does a div tag do?**
 - The div tag in HTML is a container that is used to group other HTML elements together and apply styles to them as a unit
