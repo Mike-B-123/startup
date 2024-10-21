@@ -51,7 +51,7 @@ right and left paddings are 50px
 2. Arrow functions cannot be used as constructors. Calling them with new throws a TypeError. They also don't have access to the new.target keyword.
 3. Arrow functions cannot use yield within their body and cannot be created as generator functions.
 
-What does the following code using map with an array output?
+**What does the following code using map with an array output?**
 - The map() method of Array instances creates a new array populated with the results of calling a provided function on every element in the calling array.
 Ex: const array1 = [1, 4, 9, 16];
 
@@ -61,7 +61,7 @@ const map1 = array1.map((x) => x * 2);
 console.log(map1);
 // Expected output: Array [2, 8, 18, 32]
 
-What does the following code output using getElementByID and addEventListener?
+**What does the following code output using getElementByID and addEventListener?**
 - In this example, we're getting the button element from the document using document.getElementById, and then calling addEventListener to add a 'click' event listener to the button. The second parameter is an anonymous function that will be executed when the 'click' event is detected on the button.
   Ex: const button = document.getElementById('myButton');
 
@@ -69,7 +69,7 @@ button.addEventListener('click', function() {
   // code to run when button is clicked
 });
 
-What does the following line of Javascript do using a # selector?
+**What does the following line of Javascript do using a # selector?**
 - In JavaScript, selectors can be used to select elements in the DOM. A selector can be an element ID, class, or tag name such as document.querySelector('#my-id')
   Ex: . (Here is an example of using a selector in JavaScript to select an element with an ID of 'my-id'.)
   - const element = document.querySelector('#my-id')
@@ -78,8 +78,9 @@ What does the following line of Javascript do using a # selector?
 - DOM:
 **By default, the HTML span element has a default CSS display property value of:**
   -
-How would you use CSS to change all the div elements to have a background color of red?
-How would you display an image with a hyperlink in HTML?
+**How would you use CSS to change all the div elements to have a background color of red?**
+**How would you display an image with a hyperlink in HTML?**
+  - 
 In the CSS box model, what is the ordering of the box layers starting at the inside and working out?
 Given the following HTML, what CSS would you use to set the text "trouble" to green and leave the "double" text unaffected?
 What will the following code output when executed using a for loop and console.log?
@@ -89,9 +90,13 @@ How do you declare the document type to be html?
 What is valid javascript syntax for if, else, for, while, switch statements?
 What is the correct syntax for creating a javascript object?
 Is it possible to add new properties to javascript objects?
-If you want to include JavaScript on an HTML page, which tag do you use?
-Given the following HTML, what JavaScript could you use to set the text "animal" to "crow" and leave the "fish" text unaffected?
-Which of the following correctly describes JSON?
+**If you want to include JavaScript on an HTML page, which tag do you use?**
+- You can add JavaScript code in an HTML document by employing the dedicated HTML tag <script> that wraps around JavaScript code
+**Given the following HTML, what JavaScript could you use to set the text "animal" to "crow" and leave the "fish" text unaffected?**
+  - 
+**Which of the following correctly describes JSON?**
+- JSON (JavaScript Object Notation) is a text-based format for storing and exchanging data that's both human-readable and machine-parsable. It's commonly used in web applications and API calls
+- 
 What does the console command chmod, pwd, cd, ls, vim, nano, mkdir, mv, rm, man, ssh, ps, wget, sudo  do?
 **Which of the following console command creates a remote shell session?**
 -To create a remote shell session in your terminal, use the "ssh" command followed by the username, "@" symbol, and the server address
