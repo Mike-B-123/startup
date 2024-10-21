@@ -12,22 +12,40 @@ To Deploy when the deploy file is not in the same file as the pem key do the fol
 1. use this command in the terminal "./deployFiles.sh -k <yourpemkey> -h <yourdomain> -s startup" (or simon instead of startup)
 2. Also make sure to use the Go live extenstion to text your code as you go instead of using just code pen (after every go live you will need to close the 500 port)
 
-**Midterm Review:**
+***Midterm Review:***
 **In the following code, what does the link element do?**
-In the following code,  what does a div tag do?
+- The link element allows authors to link their document to other resources. The destination of the link(s) is given by the href attribute, which must be present and must contain a valid non-empty URL potentially surrounded by spaces. A link element must have rel attribute.
+  
+**In the following code,  what does a div tag do?**
 - The div tag in HTML is a container that is used to group other HTML elements together and apply styles to them as a unit
   
 **In the following code, what is the difference between the #title and .grid selector?**
 -  title bar on a selector can help identify the selector or provide instructions for using it. For example, a title bar can indicate which Grid/Graph or panel stack the selector targets
-**A title bar on a Grid/Graph can help users identify an object on the document. It can also be used to minimize and maximize the Grid/Graph.**
-#In the following code, what is the difference between padding and margin?
+-  A title bar on a Grid/Graph can help users identify an object on the document. It can also be used to minimize and maximize the Grid/Graph.
+**In the following code, what is the difference between padding and margin?**
 - a margin is the space around an element's border, while padding is the space between an element's border and the element's content.
 
 it goes content -> padding -> Border -> Margin (FRom center to outer)
 
-Given this HTML and this CSS how will the images be displayed using flex?
-What does the following padding CSS do?
-What does the following code using arrow syntax function declaration do?
+**Given this HTML and this CSS how will the images be displayed using flex?**
+- ??
+
+**What does the following padding CSS do?**
+- create space around an element's content, inside of any defined borders
+- Ex: padding: 25px 50px 75px 100px;
+top padding is 25px
+right padding is 50px
+bottom padding is 75px
+left padding is 100px
+- Ex: padding: 25px 50px 75px;
+top padding is 25px
+right and left paddings are 50px
+bottom padding is 75px
+- EX: padding: 25px 50px;
+top and bottom paddings are 25px
+right and left paddings are 50px
+
+**What does the following code using arrow syntax function declaration do?**
 - An arrow function expression is a compact alternative to a traditional function expression, with some semantic differences and deliberate limitations in usage:
 1. Arrow functions don't have their own bindings to this, arguments, or super, and should not be used as methods.
 2. Arrow functions cannot be used as constructors. Calling them with new throws a TypeError. They also don't have access to the new.target keyword.
