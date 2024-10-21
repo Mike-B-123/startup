@@ -84,24 +84,76 @@ button.addEventListener('click', function() {
 **By default, the HTML span element has a default CSS display property value of:**
   -
 **How would you use CSS to change all the div elements to have a background color of red?**
-  - "<div class="example">
-   <p>This is some CTA text.</p>
-   <button>Click me</button>
-</div>
-- .example {
-   background-color: lightblue;
-}"
+  - "<div class="example">"
+   "<p>This is some CTA text.</p>"
+  " <button>Click me</button>"
+"</div>:"
+- ".example {"
+   "background-color: lightblue;"
+"}"
 **How would you display an image with a hyperlink in HTML?**
   - 
 **In the CSS box model, what is the ordering of the box layers starting at the inside and working out?**
+- 
 **Given the following HTML, what CSS would you use to set the text "trouble" to green and leave the "double" text unaffected?**
+-
 **What will the following code output when executed using a for loop and console.log?**
 **How would you use JavaScript to select an element with the id of “byu” and change the text color of that element to green?**
+- // Select the element with the id "byu"
+var element = document.getElementById("byu");
+
+// Change the text color to green
+element.style.color = "green";
 **What is the opening HTML tag for a paragraph, ordered list, unordered list, second level heading, first level heading, third level heading?**
+(opening) (closing tags)
+- paragraph: <p>	</p>
+- Ordered List: <ol> <li>American flamingo</li> <li>Greater flamingo</li>  </ol>
+- unordered list: <ul>	<li>American flamingo</li> <li>Greater flamingo</li> </ul>
+- first level heading: <h1>This is heading 1</h1>
+- second level heading: <h2>This is heading 2</h2>
+- thrid level heading: <h3>This is heading 3</h3>
+
 **How do you declare the document type to be html?**
 - All HTML documents must start with a document type declaration: <! DOCTYPE html> . The HTML document itself begins with <html> and ends with </html> . The visible part of the HTML document is between <body> and </body
 **What is valid javascript syntax for if, else, for, while, switch statements?**
-- 
+- if statement: if (hour < 18) {
+  greeting = "Good day";
+}
+- else statement:
+  if (hour < 18) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+- else if statement:
+- if (condition1) {
+  //  block of code to be executed if condition1 is true
+} else if (condition2) {
+  //  block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  //  block of code to be executed if the condition1 is false and condition2 is false
+}
+-  for statement:
+  for (int i = 0; i < 5; i++) {
+  System.out.println(i);
+}
+- while statement:
+  int i = 0;
+while (i < 5) {
+  System.out.println(i);
+  i++;
+}
+- switch statement: (The switch statement evaluates an expression and matches its value against a series of case clauses. If there is a match, the associated block of code is executed.)
+  int day = 2;
+switch (day) {
+  case 1:
+    System.out.println("Monday");
+    break;
+  case 2:
+    System.out.println("Thursday");
+    break;
+}
+// Outputs "Thursday" (day 2) 
 **What is the correct syntax for creating a javascript object?** ??
 - The Object. create() method in JavaScript creates a new object using an existing object as its prototype.
 **Is it possible to add new properties to javascript objects?**
@@ -112,7 +164,23 @@ button.addEventListener('click', function() {
   - 
 **Which of the following correctly describes JSON?**
 - JSON (JavaScript Object Notation) is a text-based format for storing and exchanging data that's both human-readable and machine-parsable. It's commonly used in web applications and API call
-What does the console command chmod, pwd, cd, ls, vim, nano, mkdir, mv, rm, man, ssh, ps, wget, sudo  do?
+**What does the console command chmod, pwd, cd, ls, vim, nano, mkdir, mv, rm, man, ssh, ps, wget, sudo  do?**
+  -**chmod**: You can use chmod to control who can read, edit, or run your files. For example, you might change permissions so that everyone on a system can access a file that was downloaded by one person.
+  - pwd: The PWD command in Linux system administration stands for "Print Working Directory." It is used to display the absolute path of the current working directory in the command-line interface. This command is helpful for navigating the file system and referencing the current directory in various operations
+  - cd: The cd command, also known as chdir (change directory), is a command-line shell command used to change the current working directory in various operating systems
+  - ls: The ls command is used to list files. "ls" on its own lists all files in the current directory except for hidden files.
+  - vim (?? how would I use this differently fro nano?): The vim command is used to edit text files within the command line interface (CLI). It's a powerful, customizable text editor that's often used by developers
+  - nano: The nano command is a terminal-based text editor that allows users to create, edit, and save text files directly from the command line of Unix-based systems
+  - mkdir: The mkdir command in Linux/Unix is a command-line utility that allows users to create new directories. mkdir stands for "make directory." With mkdir , you can also set permissions, create multiple directories at once, and much more
+  - mv: The mv command moves files and directories from one directory to another or renames a file or directory. If you move a file or directory to a new directory, it retains the base file name. When you move a file, all links to other files remain intact, except when you move it to a different file system.
+  - rm: (rm myfile) The rm command removes the entries for a specified file, group of files, or certain select files from a list within a directory. User confirmation, read permission, and write permission are not required before a file is removed when you use the rm command. However, you must have write permission for the directory containing the file.
+  - man: (man [ [ [ -c ] [ -t ] [ section ] ] | [ -k | -f ] ] [ -F ] [ -m ] [ -Mpath ] [ -r ] [ -a ] title)
+        -   The man command provides reference information on topics, such as commands, subroutines, and files. The man command provides one-line descriptions of commands specified by name. The man command also provides information on all commands whose descriptions contain a set of user-specified keywords
+  - ssh: (ssh [username]@[hostname_or_IP]) The SSH command sets up a secure encrypted connection between a user's device and a remote machine, often a server.
+  - ps: The ps command enables you to check the status of active processes on a system, as well as display technical information about the processes. This data is useful for administrative tasks such as determining how to set process priorities.
+  - wget: is a free GNU command-line utility tool used to download files. It retrieves files using HTTP, HTTPS, and FTP protocols and is useful for downloads in unstable networks
+  - sudo: The utility provides an efficient way to temporarily grant users or user groups privileged access to system resources so that they can run commands that they cannot run under their regular accounts
+  - do:?? The DO command in PL/I allows you to group one or more commands together and execute them repeatedly. The DO and END keywords delimit a group of commands, which is called a DO group
 **Which of the following console command creates a remote shell session?**
 -To create a remote shell session in your terminal, use the "ssh" command followed by the username, "@" symbol, and the server address
 **Which of the following is true when the -la parameter is specified for the ls console command?**
@@ -129,3 +197,13 @@ What does the console command chmod, pwd, cd, ls, vim, nano, mkdir, mv, rm, man,
 -HTTP (80), HTTPS (443), FTP (21), SSH (22), and SMTP (25)
 **What will the following code using Promises output when executed?**
 - A promise in JavaScript is an object that represents the eventual completion or failure of an asynchronous operation. It is used for handling asynchronous operations, such as making API calls or reading files, in a more organized and readable way.
+- const promiseA = new Promise((resolve, reject) => {
+  resolve(777);
+});
+// At this point, "promiseA" is already settled.
+promiseA.then((val) => console.log("asynchronous logging has val:", val));
+console.log("immediate logging");
+
+// produces output in this order:
+// immediate logging
+// asynchronous logging has val: 777
