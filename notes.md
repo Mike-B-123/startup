@@ -189,13 +189,13 @@ switch (day) {
 - Top-Level Domain (TLD): The last part of a domain name, like ".com", ".net", or ".org". 
 - Subdomain: A section within a domain, usually used to organize different parts of a website, like "blog.example.com" where "blog" is the subdomain. 
 - Root Domain: The main domain name combined with the top-level domain, like "example.com"
-**Is a web certificate is necessary to use HTTPS.**
+## Is a web certificate is necessary to use HTTPS.
 - Yes, a web certificate (also known as an SSL certificate) is absolutely necessary to use HTTPS; without it, you cannot enable the secure "HTTPS" protocol on your website, as the certificate is what allows for encryption of data transmitted between the website and the user, making it essential for secure communication online.
-##Can a DNS A record can point to an IP address or another A record.
+## Can a DNS A record can point to an IP address or another A record.
 - A DNS A record can only point to an IP address; it cannot point to another A record. The purpose of an A record is to map a domain name directly to an IP address, so its value is always an IP address
-##Port 443, 80, 22 is reserved for which protocol?**
+## Port 443, 80, 22 is reserved for which protocol?**
 -HTTP (80), HTTPS (443), FTP (21), SSH (22), and SMTP (25)
-##What will the following code using Promises output when executed?
+## What will the following code using Promises output when executed?
 - A promise in JavaScript is an object that represents the eventual completion or failure of an asynchronous operation. It is used for handling asynchronous operations, such as making API calls or reading files, in a more organized and readable way.
 - const promiseA = new Promise((resolve, reject) => {
   resolve(777);
