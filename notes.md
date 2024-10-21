@@ -79,29 +79,39 @@ button.addEventListener('click', function() {
 **By default, the HTML span element has a default CSS display property value of:**
   -
 **How would you use CSS to change all the div elements to have a background color of red?**
+  - <div class="example">
+   <p>This is some CTA text.</p>
+   <button>Click me</button>
+</div>
+- .example {
+   background-color: lightblue;
+}
 **How would you display an image with a hyperlink in HTML?**
   - 
-In the CSS box model, what is the ordering of the box layers starting at the inside and working out?
-Given the following HTML, what CSS would you use to set the text "trouble" to green and leave the "double" text unaffected?
-What will the following code output when executed using a for loop and console.log?
-How would you use JavaScript to select an element with the id of “byu” and change the text color of that element to green?
-What is the opening HTML tag for a paragraph, ordered list, unordered list, second level heading, first level heading, third level heading?
-How do you declare the document type to be html?
-What is valid javascript syntax for if, else, for, while, switch statements?
-What is the correct syntax for creating a javascript object?
-Is it possible to add new properties to javascript objects?
+**In the CSS box model, what is the ordering of the box layers starting at the inside and working out?**
+**Given the following HTML, what CSS would you use to set the text "trouble" to green and leave the "double" text unaffected?**
+**What will the following code output when executed using a for loop and console.log?**
+**How would you use JavaScript to select an element with the id of “byu” and change the text color of that element to green?**
+**What is the opening HTML tag for a paragraph, ordered list, unordered list, second level heading, first level heading, third level heading?**
+**How do you declare the document type to be html?**
+- All HTML documents must start with a document type declaration: <! DOCTYPE html> . The HTML document itself begins with <html> and ends with </html> . The visible part of the HTML document is between <body> and </body
+**What is valid javascript syntax for if, else, for, while, switch statements?**
+- 
+**What is the correct syntax for creating a javascript object?** ??
+- The Object. create() method in JavaScript creates a new object using an existing object as its prototype.
+**Is it possible to add new properties to javascript objects?**
+- Some of the ways to add property to object JavaScript include: using dot notation, using bracket [ ] notation, using defineProperty() method, using spread operator, and using Object. assign() method
 **If you want to include JavaScript on an HTML page, which tag do you use?**
 - You can add JavaScript code in an HTML document by employing the dedicated HTML tag <script> that wraps around JavaScript code
 **Given the following HTML, what JavaScript could you use to set the text "animal" to "crow" and leave the "fish" text unaffected?**
   - 
 **Which of the following correctly describes JSON?**
-- JSON (JavaScript Object Notation) is a text-based format for storing and exchanging data that's both human-readable and machine-parsable. It's commonly used in web applications and API calls
-- 
+- JSON (JavaScript Object Notation) is a text-based format for storing and exchanging data that's both human-readable and machine-parsable. It's commonly used in web applications and API call
 What does the console command chmod, pwd, cd, ls, vim, nano, mkdir, mv, rm, man, ssh, ps, wget, sudo  do?
 **Which of the following console command creates a remote shell session?**
 -To create a remote shell session in your terminal, use the "ssh" command followed by the username, "@" symbol, and the server address
 **Which of the following is true when the -la parameter is specified for the ls console command?**
--
+- Using ls -la gives a detailed, comprehensive list of all files, including hidden ones, with additional information like permissions, owner, size, and modification date.
 **Which of the following is true for the domain name banana.fruit.bozo.click, which is the top level domain, which is a subdomain, which is a root domain?**
 - Top-Level Domain (TLD): The last part of a domain name, like ".com", ".net", or ".org". 
 - Subdomain: A section within a domain, usually used to organize different parts of a website, like "blog.example.com" where "blog" is the subdomain. 
