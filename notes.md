@@ -14,7 +14,7 @@ To Deploy when the deploy file is not in the same file as the pem key do the fol
 
 ## Midterm Review:
 ### In the following code, what does the link element do?
-- "<link href="main.css" rel="stylesheet" />" The link element allows authors to link their document to other resources. The destination of the link(s) is given by the href attribute, which must be present and must contain a valid non-empty URL potentially surrounded by spaces. A link element must have rel attribute.
+- // <link href="main.css" rel="stylesheet" /> The link element allows authors to link their document to other resources. The destination of the link(s) is given by the href attribute, which must be present and must contain a valid non-empty URL potentially surrounded by spaces. A link element must have rel attribute.
   
 **In the following code,  what does a div tag do?**
 - The div tag in HTML is a container that is used to group other HTML elements together and apply styles to them as a unit
@@ -47,13 +47,13 @@ bottom padding is 75px
 top and bottom paddings are 25px
 right and left paddings are 50px
 
-**What does the following code using arrow syntax function declaration do?**
+## What does the following code using arrow syntax function declaration do?
 - An arrow function expression is a compact alternative to a traditional function expression, with some semantic differences and deliberate limitations in usage:
 1. Arrow functions don't have their own bindings to this, arguments, or super, and should not be used as methods.
 2. Arrow functions cannot be used as constructors. Calling them with new throws a TypeError. They also don't have access to the new.target keyword.
 3. Arrow functions cannot use yield within their body and cannot be created as generator functions.
 
-**What does the following code using map with an array output?**
+## What does the following code using map with an array output?
 - The map() method of Array instances creates a new array populated with the results of calling a provided function on every element in the calling array.
 - we use arrow because it's convient, but a disadvantage is it's not a real function (look at scope module)??
 Ex: const array1 = [1, 4, 9, 16];
@@ -64,7 +64,7 @@ const map1 = array1.map((x) => x * 2);
 console.log(map1);
 // Expected output: Array [2, 8, 18, 32]
 
-**What does the following code output using getElementByID and addEventListener?**
+## What does the following code output using getElementByID and addEventListener?
 - In this example, we're getting the button element from the document using document.getElementById, and then calling addEventListener to add a 'click' event listener to the button.
 - Event Listener: 
 -   The second parameter is an anonymous function that will be executed when the 'click' event is detected on the button.
@@ -74,16 +74,16 @@ button.addEventListener('click', function() {
   // code to run when button is clicked
 });
 
-**What does the following line of Javascript do using a # selector?**
+## What does the following line of Javascript do using a # selector?
 - In JavaScript, selectors can be used to select elements in the DOM. A selector can be an element ID, class, or tag name such as document.querySelector('#my-id')
   Ex: . (Here is an example of using a selector in JavaScript to select an element with an ID of 'my-id'.)
   - const element = document.querySelector('#my-id')
 
-**Which of the following are true? (mark all that are true about the DOM)**
+## Which of the following are true? (mark all that are true about the DOM)
 - DOM:
-**By default, the HTML span element has a default CSS display property value of:**
+## By default, the HTML span element has a default CSS display property value of:
   -
-**How would you use CSS to change all the div elements to have a background color of red?**
+## How would you use CSS to change all the div elements to have a background color of red?
   - "<div class="example">"
    "<p>This is some CTA text.</p>"
   " <button>Click me</button>"
@@ -91,14 +91,15 @@ button.addEventListener('click', function() {
 - ".example {"
    "background-color: lightblue;"
 "}"
-**How would you display an image with a hyperlink in HTML?**
-  - 
-**In the CSS box model, what is the ordering of the box layers starting at the inside and working out?**
-- 
-**Given the following HTML, what CSS would you use to set the text "trouble" to green and leave the "double" text unaffected?**
+## How would you display an image with a hyperlink in HTML? (using a hyperlink to get an image)
+  - // ex: <img src="https://www.educative.io/static/imgs/logos/logoMarkv2.png">
+## In the CSS box model, what is the ordering of the box layers starting at the inside and working out?
 -
-**What will the following code output when executed using a for loop and console.log?**
-**How would you use JavaScript to select an element with the id of “byu” and change the text color of that element to green?**
+## Given the following HTML, what CSS would you use to set the text "trouble" to green and leave the "double" text unaffected?
+-
+## What will the following code output when executed using a for loop and console.log?
+- 
+## How would you use JavaScript to select an element with the id of “byu” and change the text color of that element to green?
 - // Select the element with the id "byu"
 var element = document.getElementById("byu");
 
@@ -169,8 +170,9 @@ switch (day) {
   - pwd: The PWD command in Linux system administration stands for "Print Working Directory." It is used to display the absolute path of the current working directory in the command-line interface. This command is helpful for navigating the file system and referencing the current directory in various operations
   - cd: The cd command, also known as chdir (change directory), is a command-line shell command used to change the current working directory in various operating systems
   - ls: The ls command is used to list files. "ls" on its own lists all files in the current directory except for hidden files.
-  - vim (?? how would I use this differently fro nano?): The vim command is used to edit text files within the command line interface (CLI). It's a powerful, customizable text editor that's often used by developers
+  - vim : The vim command is used to edit text files within the command line interface (CLI). It's a powerful, customizable text editor that's often used by developers
   - nano: The nano command is a terminal-based text editor that allows users to create, edit, and save text files directly from the command line of Unix-based systems
+    [When to use VIM vs NANO: both are different editing engines, but can use either based off of prefernce. Both are basically the same.] 
   - mkdir: The mkdir command in Linux/Unix is a command-line utility that allows users to create new directories. mkdir stands for "make directory." With mkdir , you can also set permissions, create multiple directories at once, and much more
   - mv: The mv command moves files and directories from one directory to another or renames a file or directory. If you move a file or directory to a new directory, it retains the base file name. When you move a file, all links to other files remain intact, except when you move it to a different file system.
   - rm: (rm myfile) The rm command removes the entries for a specified file, group of files, or certain select files from a list within a directory. User confirmation, read permission, and write permission are not required before a file is removed when you use the rm command. However, you must have write permission for the directory containing the file.
@@ -180,7 +182,7 @@ switch (day) {
   - ps: The ps command enables you to check the status of active processes on a system, as well as display technical information about the processes. This data is useful for administrative tasks such as determining how to set process priorities.
   - wget: is a free GNU command-line utility tool used to download files. It retrieves files using HTTP, HTTPS, and FTP protocols and is useful for downloads in unstable networks
   - sudo: The utility provides an efficient way to temporarily grant users or user groups privileged access to system resources so that they can run commands that they cannot run under their regular accounts
-  - do:?? The DO command in PL/I allows you to group one or more commands together and execute them repeatedly. The DO and END keywords delimit a group of commands, which is called a DO group
+  - do: The DO command in PL/I allows you to group one or more commands together and execute them repeatedly. The DO and END keywords delimit a group of commands, which is called a DO group
 **Which of the following console command creates a remote shell session?**
 -To create a remote shell session in your terminal, use the "ssh" command followed by the username, "@" symbol, and the server address
 **Which of the following is true when the -la parameter is specified for the ls console command?**
