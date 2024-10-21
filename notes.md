@@ -12,15 +12,14 @@ To Deploy when the deploy file is not in the same file as the pem key do the fol
 1. use this command in the terminal "./deployFiles.sh -k <yourpemkey> -h <yourdomain> -s startup" (or simon instead of startup)
 2. Also make sure to use the Go live extenstion to text your code as you go instead of using just code pen (after every go live you will need to close the 500 port)
 
-Midterm Review:
-- In the following code, what does the link element do?
-- 
+**Midterm Review:**
+**In the following code, what does the link element do?**
 In the following code,  what does a div tag do?
 - The div tag in HTML is a container that is used to group other HTML elements together and apply styles to them as a unit
   
-#In the following code, what is the difference between the #title and .grid selector?
+**In the following code, what is the difference between the #title and .grid selector?**
 -  title bar on a selector can help identify the selector or provide instructions for using it. For example, a title bar can indicate which Grid/Graph or panel stack the selector targets
-- A title bar on a Grid/Graph can help users identify an object on the document. It can also be used to minimize and maximize the Grid/Graph.
+**A title bar on a Grid/Graph can help users identify an object on the document. It can also be used to minimize and maximize the Grid/Graph.**
 #In the following code, what is the difference between padding and margin?
 - a margin is the space around an element's border, while padding is the space between an element's border and the element's content.
 
@@ -57,9 +56,10 @@ What does the following line of Javascript do using a # selector?
   Ex: . (Here is an example of using a selector in JavaScript to select an element with an ID of 'my-id'.)
   - const element = document.querySelector('#my-id')
 
-Which of the following are true? (mark all that are true about the DOM)
-
-By default, the HTML span element has a default CSS display property value of: 
+**Which of the following are true? (mark all that are true about the DOM)**
+- DOM:
+**By default, the HTML span element has a default CSS display property value of:**
+  -
 How would you use CSS to change all the div elements to have a background color of red?
 How would you display an image with a hyperlink in HTML?
 In the CSS box model, what is the ordering of the box layers starting at the inside and working out?
@@ -75,10 +75,19 @@ If you want to include JavaScript on an HTML page, which tag do you use?
 Given the following HTML, what JavaScript could you use to set the text "animal" to "crow" and leave the "fish" text unaffected?
 Which of the following correctly describes JSON?
 What does the console command chmod, pwd, cd, ls, vim, nano, mkdir, mv, rm, man, ssh, ps, wget, sudo  do?
-Which of the following console command creates a remote shell session?
-Which of the following is true when the -la parameter is specified for the ls console command?
-Which of the following is true for the domain name banana.fruit.bozo.click, which is the top level domain, which is a subdomain, which is a root domain?
-Is a web certificate is necessary to use HTTPS.
-Can a DNS A record can point to an IP address or another A record.
-Port 443, 80, 22 is reserved for which protocol?
-What will the following code using Promises output when executed?
+**Which of the following console command creates a remote shell session?**
+-To create a remote shell session in your terminal, use the "ssh" command followed by the username, "@" symbol, and the server address
+**Which of the following is true when the -la parameter is specified for the ls console command?**
+-
+**Which of the following is true for the domain name banana.fruit.bozo.click, which is the top level domain, which is a subdomain, which is a root domain?**
+- Top-Level Domain (TLD): The last part of a domain name, like ".com", ".net", or ".org". 
+- Subdomain: A section within a domain, usually used to organize different parts of a website, like "blog.example.com" where "blog" is the subdomain. 
+- Root Domain: The main domain name combined with the top-level domain, like "example.com"
+**Is a web certificate is necessary to use HTTPS.**
+- Yes, a web certificate (also known as an SSL certificate) is absolutely necessary to use HTTPS; without it, you cannot enable the secure "HTTPS" protocol on your website, as the certificate is what allows for encryption of data transmitted between the website and the user, making it essential for secure communication online.
+**Can a DNS A record can point to an IP address or another A record.**
+- A DNS A record can only point to an IP address; it cannot point to another A record. The purpose of an A record is to map a domain name directly to an IP address, so its value is always an IP address
+**Port 443, 80, 22 is reserved for which protocol?**
+-HTTP (80), HTTPS (443), FTP (21), SSH (22), and SMTP (25)
+**What will the following code using Promises output when executed?**
+- A promise in JavaScript is an object that represents the eventual completion or failure of an asynchronous operation. It is used for handling asynchronous operations, such as making API calls or reading files, in a more organized and readable way.
