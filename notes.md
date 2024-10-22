@@ -14,40 +14,40 @@ To Deploy when the deploy file is not in the same file as the pem key do the fol
 
 ## Midterm Review:
 ### In the following code, what does the link element do?
--  "<" link href="main.css" rel="stylesheet" /> The link element allows authors to link their document to other resources. The destination of the link(s) is given by the href attribute, which must be present and must contain a valid non-empty URL potentially surrounded by spaces. A link element must have rel attribute.
+-  "<" link href="main.css" rel="stylesheet" /> The link element allows authors to link their document to other resources. The destination of the link(s) is given by the href attribute, which must be present and must contain a valid non-empty URL potentially surrounded by spaces. A link element must have rel attribute. (the rel attribute
   
-**In the following code,  what does a div tag do?**
+### In the following code,  what does a div tag do?
 - The div tag in HTML is a container that is used to group other HTML elements together and apply styles to them as a unit
   
-**In the following code, what is the difference between the #title and .grid selector?**
--  title bar on a selector can help identify the selector or provide instructions for using it. For example, a title bar can indicate which Grid/Graph or panel stack the selector targets
-- A title bar on a Grid/Graph can help users identify an object on the document. It can also be used to minimize and maximize the Grid/Graph.
+### In the following code, what is the difference between the #title and .grid selector? 
+- "#" is for the ID. which specifies specific objects, and used only for selecting one element.
+- "." is for the class. used for selecting multiple objects.
 
-**In the following code, what is the difference between padding and margin?**
+## In the following code, what is the difference between padding and margin?
 - a margin is the space around an element's border, while padding is the space between an element's border and the element's content.
 
 it goes content -> padding -> Border -> Margin (From center to outer)
 
-**Given this HTML and this CSS how will the images be displayed using flex?**
+### Given this HTML and this CSS how will the images be displayed using flex?
 - flex can help with sizing on screen. And help with structure between body, foot, and header. Also helps with direction such as column or rows.
 - We can create multiple rows in our website to seperate headers into different sections.
 
-**What does the following padding CSS do?**
+### What does the following padding CSS do?
 - create space around an element's content, inside of any defined borders
-- Ex: padding: 25px 50px 75px 100px;
+- **Ex: padding: 25px 50px 75px 100px;** (can do the same with margin and border, but border has slightly different syntax)
 top padding is 25px
 right padding is 50px
 bottom padding is 75px
 left padding is 100px
-- Ex: padding: 25px 50px 75px;
+- **Ex: padding: 25px 50px 75px;**
 top padding is 25px
 right and left paddings are 50px
 bottom padding is 75px
-- EX: padding: 25px 50px;
+- **EX: padding: 25px 50px;**
 top and bottom paddings are 25px
 right and left paddings are 50px
 
-## What does the following code using arrow syntax function declaration do?
+### What does the following code using arrow syntax function declaration do?
 - An arrow function expression is a compact alternative to a traditional function expression, with some semantic differences and deliberate limitations in usage:
 1. Arrow functions don't have their own bindings to this, arguments, or super, and should not be used as methods.
 2. Arrow functions cannot be used as constructors. Calling them with new throws a TypeError. They also don't have access to the new.target keyword.
@@ -80,9 +80,13 @@ button.addEventListener('click', function() {
   - const element = document.querySelector('#my-id')
 
 ## Which of the following are true? (mark all that are true about the DOM)
-- DOM:
+- DOM: Document object model. Represents the contents of a file in a tree structure.
+- We can use DOM to interact with an HTML with pages: add content, delete content, change content.
+- - In an DOM every HTML element in the document becomes an object.
 ## By default, the HTML span element has a default CSS display property value of:
-  -
+  - The HTML <span> element has a default CSS display property value of inline
+  - inline means that the element does not start on a new line and only takes up as much width as necessary.
+  - Inline elements like <span> can exist alongside other elements on the same line, and their dimensions (width and height) cannot be modified directly with CSS (although padding, margins, and borders can affect spacing).
 ## How would you use CSS to change all the div elements to have a background color of red?
   - "<div class="example">"
    "<p>This is some CTA text.</p>"
@@ -91,14 +95,34 @@ button.addEventListener('click', function() {
 - ".example {"
    "background-color: lightblue;"
 "}"
-## How would you display an image with a hyperlink in HTML? (using a hyperlink to get an image)
+### How would you display an image with a hyperlink in HTML? (using a hyperlink to get an image)
   - // ex: <img src="https://www.educative.io/static/imgs/logos/logoMarkv2.png">
-## In the CSS box model, what is the ordering of the box layers starting at the inside and working out?
--
-## Given the following HTML, what CSS would you use to set the text "trouble" to green and leave the "double" text unaffected?
--
-## What will the following code output when executed using a for loop and console.log?
-- 
+### In the CSS box model, what is the ordering of the box layers starting at the inside and working out?   
+- (see further explain on padding question:)
+- Content: This is the innermost area, where text, images, or other elements are placed.
+Padding: The space between the content and the border. Padding is inside the border and increases the size of the box without affecting the content.
+Border: A line surrounding the padding (if any) and content. You can control the width, style, and color of the border.
+Margin: The outermost layer, which creates space between the border of the element and the neighboring elements. Margins are outside the border and do not affect the size of the element itself.
+### Given the following HTML, what CSS would you use to set the text "trouble" to green and leave the "double" text unaffected?
+- <span class="highlight">trouble</span>
+<span>double</span>
+- You can also use an nth-type selector
+- Ex: span:nth-of-type(1) {
+    color: green;
+}
+### What will the following code output when executed using a for loop and console.log?
+- Outputs Information: It prints the argument(s) passed to it (e.g., strings, numbers, objects, arrays) to the console.
+Useful for Debugging: Developers use it to track the value of variables, test conditions, or log errors while running JavaScript code.
+Accessible in Developer Tools: You can see the output by opening the browser’s developer tools (usually by pressing F12 or right-clicking and selecting "Inspect" and navigating to the "Console" tab).
+- You can pass in multiple arguements and it will print them in order
+- Example with for loop:
+- for (let i = 0; i < 5; i++) {
+    console.log("The value of i is:", i);
+}
+- Output:
+- The value of i is: 0
+- The value of i is: 1
+- The value of i is: 2 etc
 ## How would you use JavaScript to select an element with the id of “byu” and change the text color of that element to green?
 - // Select the element with the id "byu"
 var element = document.getElementById("byu");
@@ -114,9 +138,10 @@ element.style.color = "green";
 - second level heading: <h2>This is heading 2</h2>
 - thrid level heading: <h3>This is heading 3</h3>
 
-**How do you declare the document type to be html?**
+### How do you declare the document type to be html?
 - All HTML documents must start with a document type declaration: <! DOCTYPE html> . The HTML document itself begins with <html> and ends with </html> . The visible part of the HTML document is between <body> and </body
-**What is valid javascript syntax for if, else, for, while, switch statements?**
+  
+### What is valid javascript syntax for if, else, for, while, switch statements?
 - if statement: if (hour < 18) {
   greeting = "Good day";
 }
@@ -155,17 +180,53 @@ switch (day) {
     break;
 }
 // Outputs "Thursday" (day 2) 
-**What is the correct syntax for creating a javascript object?** ??
-- The Object. create() method in JavaScript creates a new object using an existing object as its prototype.
+### What is the correct syntax for creating a javascript object? 
+- The Object. create() method in JavaScript creates a new object using an existing object as its prototype. You can also just use a simple as: (use constant for default things so it doesn't change down stream)
+  Ex: constant person {name: mick,
+  age: 20,
+  height:6'0 }                                                                                                
 **Is it possible to add new properties to javascript objects?**
 - Some of the ways to add property to object JavaScript include: using dot notation, using bracket [ ] notation, using defineProperty() method, using spread operator, and using Object. assign() method
-**If you want to include JavaScript on an HTML page, which tag do you use?**
+Ex: (dot notation)
+const person = {
+  name: 'Alice',
+  age: 30
+};
+
+// Adding a new property
+person.city = 'New York';
+
+console.log(person);
+// Output: { name: 'Alice', age: 30, city: 'New York' }
+Ex: (Bracket Notation)
+
+EX 2:
+const car = {
+  make: 'Toyota',
+  model: 'Camry'
+};
+
+// Adding a new property using a variable
+const propertyName = 'year';
+car[propertyName] = 2021;
+
+console.log(car);
+// Output: { make: 'Toyota', model: 'Camry', year: 2021 }
+
+### If you want to include JavaScript on an HTML page, which tag do you use?
 - You can add JavaScript code in an HTML document by employing the dedicated HTML tag <script> that wraps around JavaScript code
 **Given the following HTML, what JavaScript could you use to set the text "animal" to "crow" and leave the "fish" text unaffected?**
-  - 
-**Which of the following correctly describes JSON?**
-- JSON (JavaScript Object Notation) is a text-based format for storing and exchanging data that's both human-readable and machine-parsable. It's commonly used in web applications and API call
-**What does the console command chmod, pwd, cd, ls, vim, nano, mkdir, mv, rm, man, ssh, ps, wget, sudo  do?**
+  - (see selector functions at the bottom of notes.md)
+  - Here's an exmple using ID selecting:
+"<" p id="animal">animal</p>
+"<"p id="fish">fish</p>
+
+document.getElementById('animal').innerText = 'crow';
+
+### Which of the following correctly describes JSON?
+- **JSON** (JavaScript Object Notation) is a text-based format for storing and exchanging data that's both human-readable and machine-parsable. It's commonly used in web applications and API call. You can put data in it that you then can use in your main code like in HTML, java script, ect. It's just a nice format that is similar to java script to store numbers, arrays, strings, ects. for later use.
+- 
+### What does the console command chmod, pwd, cd, ls, vim, nano, mkdir, mv, rm, man, ssh, ps, wget, sudo  do?
   -**chmod**: You can use chmod to control who can read, edit, or run your files. For example, you might change permissions so that everyone on a system can access a file that was downloaded by one person.
   - pwd: The PWD command in Linux system administration stands for "Print Working Directory." It is used to display the absolute path of the current working directory in the command-line interface. This command is helpful for navigating the file system and referencing the current directory in various operations
   - cd: The cd command, also known as chdir (change directory), is a command-line shell command used to change the current working directory in various operating systems
@@ -178,24 +239,28 @@ switch (day) {
   - rm: (rm myfile) The rm command removes the entries for a specified file, group of files, or certain select files from a list within a directory. User confirmation, read permission, and write permission are not required before a file is removed when you use the rm command. However, you must have write permission for the directory containing the file.
   - man: (man [ [ [ -c ] [ -t ] [ section ] ] | [ -k | -f ] ] [ -F ] [ -m ] [ -Mpath ] [ -r ] [ -a ] title)
         -   The man command provides reference information on topics, such as commands, subroutines, and files. The man command provides one-line descriptions of commands specified by name. The man command also provides information on all commands whose descriptions contain a set of user-specified keywords
-  - ssh: (ssh [username]@[hostname_or_IP]) The SSH command sets up a secure encrypted connection between a user's device and a remote machine, often a server.
-  - ps: The ps command enables you to check the status of active processes on a system, as well as display technical information about the processes. This data is useful for administrative tasks such as determining how to set process priorities.
-  - wget: is a free GNU command-line utility tool used to download files. It retrieves files using HTTP, HTTPS, and FTP protocols and is useful for downloads in unstable networks
-  - sudo: The utility provides an efficient way to temporarily grant users or user groups privileged access to system resources so that they can run commands that they cannot run under their regular accounts
-  - do: The DO command in PL/I allows you to group one or more commands together and execute them repeatedly. The DO and END keywords delimit a group of commands, which is called a DO group
-**Which of the following console command creates a remote shell session?**
--To create a remote shell session in your terminal, use the "ssh" command followed by the username, "@" symbol, and the server address
-**Which of the following is true when the -la parameter is specified for the ls console command?**
+  - **ssh:** (ssh [username]@[hostname_or_IP]) The SSH command sets up a secure encrypted connection between a user's device and a remote machine, often a server.
+  - **ps:** The ps command enables you to check the status of active processes on a system, as well as display technical information about the processes. This data is useful for administrative tasks such as determining how to set process priorities.
+  - **wget:** is a free GNU command-line utility tool used to download files. It retrieves files using HTTP, HTTPS, and FTP protocols and is useful for downloads in unstable networks
+  - **sudo:** The utility provides an efficient way to temporarily grant users or user groups privileged access to system resources so that they can run commands that they cannot run under their regular accounts
+  - **do:** The DO command in PL/I allows you to group one or more commands together and execute them repeatedly. The DO and END keywords delimit a group of commands, which is called a DO group. Almost used as a loop over elements
+### Which of the following console command creates a remote shell session?
+-To create a remote shell session in your terminal, use the "ssh" command followed by the username, "@" symbol, and the server address (ssh username@remote_host)
+- **You can also use:**
+- Telnet: Use telnet remote_host (less secure).
+- RDP: Use mstsc for a remote desktop connection on Windows.
+- PowerShell Remoting: Use Enter-PSSession for remote sessions on Windows via PowerShell
+### Which of the following is true when the -la parameter is specified for the ls console command?
 - Using ls -la gives a detailed, comprehensive list of all files, including hidden ones, with additional information like permissions, owner, size, and modification date.
 ### Which of the following is true for the domain name banana.fruit.bozo.click, which is the top level domain, which is a subdomain, which is a root domain?
-- **Top-Level Domain (TLD)**: The last part of a domain name, like ".com", ".net", or ".org". 
-- **Subdomain**: A section within a domain, usually used to organize different parts of a website, like "blog.example.com" where "blog" is the subdomain. 
-- **Root Domain**: The main domain name combined with the top-level domain, like "example.com"
+- **Top-Level Domain (TLD)**: The last part of a domain name, like ".com", ".net", or ".org". [.click]
+- **Subdomain**: A section within a domain, usually used to organize different parts of a website, like "blog.example.com" where "blog" is the subdomain. [bannana.fruit.bozo.click]
+- **Root Domain**: The main domain name combined with the top-level domain, like "example.com" [bozo.click]
 ### Is a web certificate is necessary to use HTTPS.
 - Yes, a web certificate (also known as an SSL certificate) is absolutely necessary to use HTTPS; without it, you cannot enable the secure "HTTPS" protocol on your website, as the certificate is what allows for encryption of data transmitted between the website and the user, making it essential for secure communication online.
 ### Can a DNS A record can point to an IP address or another A record.
 - A DNS A record can only point to an IP address; it cannot point to another A record. The purpose of an A record is to map a domain name directly to an IP address, so its value is always an IP address
-### Port 443, 80, 22 is reserved for which protocol?**
+### Port 443, 80, 22 is reserved for which protocol?
 -HTTP (80), HTTPS (443), FTP (21), SSH (22), and SMTP (25)
 ### What will the following code using Promises output when executed?
 - A promise in JavaScript is an object that represents the eventual completion or failure of an asynchronous operation. It is used for handling asynchronous operations, such as making API calls or reading files, in a more organized and readable way.
@@ -209,3 +274,23 @@ console.log("immediate logging");
 // produces output in this order:
 // immediate logging
 // asynchronous logging has val: 777
+
+### JAVA Script Selectors:
+**Tag selector:** Select elements by tag name (e.g., div, p, etc.).
+**Class selector:** Select elements by class name using a . prefix.
+**ID selector:** Select elements by ID using a # prefix. [example: const introElement = document.querySelector('#intro');]
+**Attribute selector:** Select elements by specific attributes (e.g., data-*, href, etc.).
+**Descendant selector:** Select elements nested within a specific parent.
+**Nth-child selector:** Select elements based on their order in the document.
+**Sibling selector:** Select elements next to others.
+
+## DOM
+### Why is the DOM Important?
+**Interactivity:** The DOM allows web pages to be interactive. Without the DOM, JavaScript wouldn't be able to interact with the HTML, making dynamic web applications impossible.
+
+**Dynamic Content:** It makes it possible to create dynamic content that changes in response to user actions or other data sources (e.g., loading new data into a webpage without refreshing).
+
+**Separation of Concerns:** The DOM helps to separate the structure of the web page (HTML) from the behavior (JavaScript) and presentation (CSS), leading to cleaner and more maintainable code.
+
+**Summary:**
+The DOM is essential for manipulating web pages, handling user interactions, dynamically updating content, and making web applications interactive. It provides a structured representation of a document and a way for programming languages, especially JavaScript, to access and modify it in real-time.
