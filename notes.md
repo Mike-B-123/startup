@@ -294,3 +294,244 @@ console.log("immediate logging");
 
 **Summary:**
 The DOM is essential for manipulating web pages, handling user interactions, dynamically updating content, and making web applications interactive. It provides a structured representation of a document and a way for programming languages, especially JavaScript, to access and modify it in real-time.
+
+Example HTML:
+<!DOCTYPE html>
+<html lang="en">
+  <head class ="bg-dark text-light">
+    <meta charset="UTF-8" />
+    <!-- Tell browsers not to scale the viewport automatically -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Bucket List</title>
+    <link rel="stylesheet" href="main.css" />
+
+    <!-- Include bootstrap CSS framework -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-dark text-light">
+    <!-- Use header, main, and footer elements to give semantic structure -->
+    <header class="container-fluid">
+      <!-- Navigation elements -->
+      <nav class="navbar top navbar-dark">
+        <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
+        <menu class="navbar-nav menu">
+          <a class="navbar-brand" > The Bucket List </a>
+          <li class="nav-item" ><a class="nav-link active"  href="index.html">Home</a></li>
+          <li class="nav-item" ><a class="nav-link" href="Destinations.html">Destinations</a></li>
+          <li class="nav-item"><a  class="nav-link" href="My_list.html">My List</a></li>
+          <li class="nav-item"><a  class="nav-link" href="recommended.html">Recommended</a></li>
+        </menu>
+      </nav>
+
+      <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
+    </header>
+
+    <main class="container-fluid bg-secondary text-center main">
+      <div>
+      <h1> Welcome to Adventure!</h1>
+      <form method="get" action="Destinations.html"></form>
+          <div class="input-group mb-3">
+            <span class="input-group-text">@</span>
+            <input class="form-control" placeholder="your@email.com" />
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">🔒</span>
+            <input class="form-control" placeholder="password" />
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="submit" class="btn btn-primary">Create</button>
+      </form>
+      </div>
+    </main>
+
+    <footer class= "footer container-fluid">
+      <span class="text-reset">Mick Buck</span>
+      <a href="https://github.com/Mike-B-123/startup">GitHub</a>
+    </footer>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+Example: CSS
+* {
+  font-family: fantasy;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-width: 375px;
+    margin: 0;
+    height: 100%;
+  }
+  
+  header {
+    background-color: #7E8C54;
+    color: white;
+    flex: 0 80px;
+  }
+  main {
+    flex: 1 ;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: calc(92vh - 100px);
+  }
+  section {
+    flex: 1 ;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    justify-content: space-around;
+  }
+  
+  footer {
+    background-color: #7E8C54;
+    color: white;
+    overflow: hidden;
+    flex: 0 80px;
+  }
+  
+  menu {
+    flex: 1;
+    display: flex;
+    /*  overwrite Bootstrap so the menu does not wrap */
+    flex-direction: row !important;
+    list-style: none;
+  }
+  
+  .navbar-brand {
+    padding-left: 0.3em;
+    border-bottom: solid rgb(182, 182, 182) thin;
+  }
+  
+  menu .nav-item {
+    padding: 0 0.3em;
+  }
+  
+  footer a {
+    float: right;
+  }
+
+  image{
+  max-width: 500px;
+  height: 100px;
+  }
+
+  @media(min-width: 1200px) {
+    image{
+        width: 50%;
+    }
+  }
+  @media(min-width: 768px) {
+    image{
+        width: 70%;
+    }
+  }
+  
+  @media (max-height: 600px) {
+    header {
+      display: none;
+    }
+    footer {
+      display: none;
+    }
+    main {
+      flex: 1 100vh;
+    }
+  }
+
+
+
+Example Java:
+function pickupPizza() {
+  const order = Createorder();
+
+  // Promise
+  Orderfirst(order)
+    .then((order) => Placeorder(order))
+    .then((order) => Serveorder(order))
+    .catch((order) => {
+      Droppedpizza(order);
+    });
+}
+
+function Createorder() {
+  // Make the order and associate it with a new HTML element
+  const id = Math.floor(Math.random() * 10000);
+  const orderElement = document.createElement("li");
+  const order = { element: orderElement, id: id };
+
+  // Insert the order into the HTML list
+  orderElement.innerHTML = `<span>[${order.id}] 👨🏻‍🍳 <i>Making Pizza Now!</i> ...</span>`;
+  const orders = document.getElementById("orders");
+  orders.appendChild(orderElement);
+
+  return order;
+}
+
+function Orderfirst(order) {
+  return new Promise((resolve, reject) => {
+    Dowork(order, 1000, 3000, resolve, reject, `Cashier out now!`);
+  });
+}
+function Placeorder(order) {
+  return new Promise((resolve, reject) => {
+    Makepizza(order, 1000, 3000, resolve, reject, `We ran out of tomatos!`);
+  });
+}
+
+function Dowork(order, min, max, resolve, reject, errMsg) {
+  let workTime = Math.random() * (max - min) + min;
+  setTimeout(() => {
+    workTime = Math.round(workTime);
+    if (workTime < max * 0.85) {
+      resolve(order);
+    } else {
+      order.error = errMsg;
+      reject(order);
+    }
+  }, workTime);
+}
+
+function Serveorder(order) {
+  order.element.innerHTML = `<span>[${order.id}] 🍕 <b>Served</b>!</span>`;
+}
+
+function Orderfailure(order) {
+  order.element.innerHTML = `<span> [${order.id}] 😠 <b class='failure'>Failure</b>! ${order.error}</span>`;
+}
+
+function Makepizza(order, min, max, resolve, reject, errMsg) {
+  let workTime = Math.random() * (max - min) + min;
+  setTimeout(() => {
+    workTime = Math.round(workTime);
+    if (workTime < max * 0.8) {
+      resolve(order);
+    } else {
+      order.error = errMsg;
+      reject(order);
+    }
+  }, workTime);
+}
+
+function Addingingredients(order) {
+  order.element.innerHTML = `<span>[${order.id}] 🍅<b>Adding ingredients</b>!</span>`;
+}
+
+function Droppedpizza(order) {
+  order.element.innerHTML = `<span> [${order.id}] 🥲 <b class='failure'>Whoops!</b>! ${order.error}</span>`;
+}
+
