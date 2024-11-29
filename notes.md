@@ -535,3 +535,6 @@ function Droppedpizza(order) {
   order.element.innerHTML = `<span> [${order.id}] 🥲 <b class='failure'>Whoops!</b>! ${order.error}</span>`;
 }
 
+# React
+- React components are regular JavaScript functions, but their names **must** start with a capital letter or they won’t work!
+
