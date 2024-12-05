@@ -50,3 +50,19 @@ For this deliverable I properly styled the application with CSS into its final a
  - **Application text content** - Consistent fonts, and text coloring that contrasts background.
  - **Application images** - Used thumbnail styling for clickable images and used rounded borders for non-clickable images.
  - **Application elements** - Used good contrast and whitespace
+ - 
+
+ ## React Deliverable:
+
+
+For this deliverable I used JavaScript and React so that the application completely works for a single user. I also added placeholders for future technology.
+
+
+ - **Router** - Each page is routed to on the app.jsx file. It will start on the login page and route you to every other page.
+ - **Hooks** - I use hooks to generate new descriptions and quotes on the country page. The quote generation is mocking the funcitionality of API generated quotes that will be implemented later.
+ - **Navigation elements** - I use naviagtion elements to create a Navlink that routes the user to the desired page.
+ - **Components** - The following was implmented with components!
+     - **Login** - I used components to display the udername after login and one each page header after login.
+     - **Third Party Calls** - I used components to generate quotes that mock the third party service call I will implement later!
+ - **Vite Bundled** - This delveriable is bundled with Vite!
+
