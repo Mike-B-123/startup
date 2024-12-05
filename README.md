@@ -58,11 +58,11 @@ For this deliverable I properly styled the application with CSS into its final a
 For this deliverable I used JavaScript and React so that the application completely works for a single user. I also added placeholders for future technology.
 
 
- - **Router** - Each page is routed to on the app.jsx file. It will start on the login page and route you to every other page.
- - **Hooks** - I use hooks to generate new descriptions and quotes on the country page. The quote generation is mocking the funcitionality of API generated quotes that will be implemented later.
- - **Navigation elements** - I use naviagtion elements to create a Navlink that routes the user to the desired page.
+ - **Router** - Each page is routed-to on the app.jsx file. It will start on the login page and route the user to every other page after login.
+ - **Hooks** - I use hooks to generate new descriptions and quotes on the country pages. The quote generation is mocking the funcitionality of API generated quotes that will be implemented later.
+ - **Navigation elements** - I use navigation elements to create Navlinks on the top bar that routes the user to the desired page.
  - **Components** - The following was implmented with components!
-     - **Login** - I used components to display the udername after login and one each page header after login.
-     - **Third Party Calls** - I used components to generate quotes that mock the third party service call I will implement later!
+     - **Login** - I used components for login capabilities.
+     - **Websocket** I use components to display the username on each page in the top left. Later I will use websockets to get this username from the database to display.
  - **Vite Bundled** - This delveriable is bundled with Vite!
 
