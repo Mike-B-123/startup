@@ -1,8 +1,11 @@
 import React from 'react';
 import './Destinations.css';
+import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export function Destinations(props) {
   const [quote, setQuote] = React.useState('Quote Here!');
+  const navigate = useNavigate();
   
   // We only want this to render the first time the component is created and so we provide an empty dependency list.
   const quote_list = ['This is a place holder for third-party service call, but is using a component. Reload the page to see a new one', 'One of the most buetiful places on Earth', 'Reload the page to see a new quote I used components for!', 'Give this page a reload to see a new quote!']
@@ -20,8 +23,8 @@ export function Destinations(props) {
             Best of luck finding your next dream destination!</p>
             <nav class = "navbar-dark">
           <menu class="navbar-nav">
-         <div class="img-thumbnail" to = "https://startup.thebucketlist.click/japan"> </div><img src="https://admin.expatica.com/jp/wp-content/uploads/sites/18/2023/11/tokyo-skyline-fuji.jpg" alt="Japan Image" width="150" height="150"></img>
-          <a class="img-thumbnail" to ="https://startup.thebucketlist.click/southkorea"> <img src="https://silversea-discover.imgix.net/2022/12/QCRUa0gV-2asunsetinSeoulskyline_1490190263.jpg?auto=compress%2Cformat&ixlib=php-3.3.1" alt="South Korea" width="150" height="150"></img></a>
+         <div className="countrylink img-thumbnail" onClick={() => navigate("/japan")}> <img src="https://admin.expatica.com/jp/wp-content/uploads/sites/18/2023/11/tokyo-skyline-fuji.jpg" alt="Japan Image" width="150" height="150"></img> </div>
+          <div onClick={() => navigate("/southkorea")} className="countrylink img-thumbnail" > <img src="https://silversea-discover.imgix.net/2022/12/QCRUa0gV-2asunsetinSeoulskyline_1490190263.jpg?auto=compress%2Cformat&ixlib=php-3.3.1" alt="South Korea" width="150" height="150"></img></div>
         </menu>
       </nav>
     </main>

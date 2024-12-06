@@ -1,8 +1,10 @@
 import React from 'react';
 import './Recommended.css';
+import { useNavigate } from 'react-router-dom';
 
 export function Recommended(props) {
   const [quote, setQuote] = React.useState('Quote Here!');
+  const navigate = useNavigate();
   
   // We only want this to render the first time the component is created and so we provide an empty dependency list.
   const quote_list = ['This is a place holder for third-party service call, but is using a component. Reload the page to see a new one', 'Reload the page to see a new quote I used components for!', 'Give this page a reload to see a new quote!']
@@ -16,13 +18,7 @@ export function Recommended(props) {
       <p> Based on your previous searches Atlas recommends you look at these destinations below. 
           <br/> Just click on an image to go to that destination's page. 
            Happy adventuring!</p>
-           <nav class = "navbar-dark">
-            <menu class="navbar-nav">
-                <a href="Japan.html"> <img class="img-thumbnail img-fluid" src="https://admin.expatica.com/jp/wp-content/uploads/sites/18/2023/11/tokyo-skyline-fuji.jpg" alt="Japan Image" height="400" width="400">
-                    </img>
-                    </a>
-                </menu>
-            </nav>
+            <div className="countrylink img-thumbnail" onClick={() => navigate("/japan")}> <img src="https://admin.expatica.com/jp/wp-content/uploads/sites/18/2023/11/tokyo-skyline-fuji.jpg" alt="Japan Image" width="150" height="150"></img> </div>
     </main>
   );
 }
