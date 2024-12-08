@@ -4,7 +4,7 @@ import './Japan.css';
 export function Japan(props) {
   const [description, setDescription] = React.useState('Loading...');
   const [quote, setQuote] = React.useState('Quote Here!');
-  const [quoteAuthor, setQuoteAuthor] = React.useState('Quote Author Here!');
+  const [author, setQuoteAuthor] = React.useState('Quote Author Here!');
   
   // might have to get rid of description API
   // We only want this to render the first time the component is created and so we provide an empty dependency list.
@@ -37,7 +37,7 @@ export function Japan(props) {
       <section>
   <h2>Atlas's Recommendations</h2>
   <img class="img-fluid rounded" src="https://heronscrossing.vet/wp-content/uploads/Golden-Retriever.jpg" alt="Golden-Retriever Image" width="125" height="100"></img>
-<p> {quote} - {quoteAuthor}</p>
+<p> {quote} - {author}</p>
       <p>Our mascot Atlas recommends you try to go to Mount Fuji on your next visit to South Korea!
       <br/>Mount Fuji is Japan's highest peak, which is also the world's most climbed mountain. Happy adventuring! </p>
           <hr />
