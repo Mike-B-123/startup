@@ -70,8 +70,8 @@ For this deliverable I used JavaScript and React so that the application complet
 
 For this deliverable I added backend endpoints that receives login and fetch API calls and returns the needed response.
 
-- **Node.js/Express HTTP service** - done!
-- **Static middleware for frontend** - done!
-- **Calls to third party endpoints** - I didn't have time to implement this. 😔
-- **Backend service endpoints** - Placeholders for login that stores the current user on the server. Endpoints for voting.
-- **Frontend calls service endpoints** - I did this using the fetch function.
+- **Node.js/Express HTTP service** - This is implimented in my service/index.js file. Refer to the "const express = require('express');"
+- **Static middleware for frontend** - This is also implemented in my index.js file. Using API routers.
+- **Calls to third party endpoints** - I implemented this in both my frontend and backend. I tried to just do a normal fetch call on my front end. However, I kept getting a "CORS" error so I had to do the API call in the backend. Then the frontend end calls the backend for this API response. (see Japan.jsx quote statement)
+- **Backend service endpoints** - Placeholder for login that helps display the username on each of my webpages. In addition, I implemented a API call on my backend that my frontend calls.
+- **Frontend calls service endpoints** - My frontend calls service end points in the back end using a fetch call and retrieves API calls in the backend and stored Username information.
