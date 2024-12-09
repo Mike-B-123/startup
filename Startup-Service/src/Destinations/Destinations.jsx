@@ -16,14 +16,15 @@ export function Destinations(props) {
     const random = Math.floor(Math.random() * 1000);
 
     // change this for the stoic API
-    fetch('https://quote.cs260.click') 
+    fetch('/api/quote/response') 
       .then((response) => response.json())
       .then((data) => {
-        setQuote(data.quote);
-        setQuoteAuthor(data.author);
+        console.log(data)
+        setQuote(data['q']);
+        setQuoteAuthor(data['a']);
       })
       .catch();
-  }, [])
+  }, []);
 
   return (
     <main class="container-fluid bg-secondary text-center main">
