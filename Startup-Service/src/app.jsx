@@ -14,12 +14,13 @@ function App() {
   const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
   const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
   const [authState, setAuthState] = React.useState(currentAuthState);
-
+  
   return ( // anything within the return becomes html and outside the return is javascript. Think of using components as HTML
     <BrowserRouter>
       <div className='body bg-dark text-light'>
         <header className='container-fluid'>
           <div> {userName} </div>
+          <br/>
           <br/>
           <nav className='navbar fixed-top navbar-dark'>
             <div className='navbar-brand'>

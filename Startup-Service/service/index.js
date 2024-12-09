@@ -63,8 +63,6 @@ apiRouter.get('/quote/response', (_req, res) => {
   fetch('https://zenquotes.io/api/random') 
   .then((response) => response.json())
   .then((data) => {
-        console.log(data)
-        console.log(data[0]['q'], data[0]['a'])
         res.send({q: data[0]['q'], a: data[0]['a']});
       })
       .catch();
