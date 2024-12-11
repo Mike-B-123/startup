@@ -8,8 +8,6 @@ export function Japan(props) {
   
   // might have to get rid of description API
   // We only want this to render the first time the component is created and so we provide an empty dependency list.
-  const des_list = ['A beautiful and exciting country, Japan is filled with rich history and culture!', 'One of the most buetiful places on Earth', 'This is definately one for the bucket list!']
-  const quote_list = ['This is a place holder for third-party service call, but is using a component. Reload the page to see a new one', 'Reload the page to see a new quote I used components for!', 'Give this page a reload to see a new quote!']
   React.useEffect(() => {
     const random = Math.floor(Math.random() * 1000);
 
@@ -32,7 +30,7 @@ export function Japan(props) {
     <section>
     <h1>Japan</h1>
 <img class="img-fluid rounded" src="https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg" alt="Image of Japan" width="125" height="100"></img>
-      <p>{description} Some fun facts about Japan: 
+      <p>Some fun facts about Japan: 
       <br/> Japan is actually made up of 6,582 islands, but only about 430 are inhabited. The largest islands are Kyushu, Hokkaido, Shikoku, and Honshu.
       <br/>Lastly, Japan is known for their high speed "bullet trains" and their punctuality, with an average delay of only 18 seconds. Try riding one next time you go! 
       </p>

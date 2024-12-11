@@ -27,7 +27,7 @@ export function South_Korea(props) {
       <h1>South Korea</h1>
       <img class="img-fluid rounded" src="https://silversea-discover.imgix.net/2022/12/QCRUa0gV-2asunsetinSeoulskyline_1490190263.jpg?auto=compress%2Cformat&ixlib=php-3.3.1" alt="Image of South Korea" width="125" height="100"></img>
         <p>{quote} - {author}</p>
-        <p>{description} Some fun facts about South Korea: 
+        <p>Some fun facts about South Korea: 
         <br/> Kimchi is a famous Koren dish and has been part of Korean food culture for thousands of years! 
         Try it next time you visit.<br/>The top three largest cities in South Korea are Seoul (pop: 10,349,312), Busan	(pop: 3,678,555), and
     Incheon (pop: 2,954,955).<br/> Visit them next time you go!</p>
