@@ -75,3 +75,24 @@ For this deliverable I added backend endpoints that receives login and fetch API
 - **Calls to third party endpoints** - I implemented this in both my frontend and backend. I tried to just do a normal fetch call on my front end. However, I kept getting a "CORS" error so I had to do the API call in the backend. Then the frontend end calls the backend for this API response. (see Japan.jsx quote statement)
 - **Backend service endpoints** - Placeholder for login that helps display the username on each of my webpages. In addition, I implemented a API call on my backend that my frontend calls.
 - **Frontend calls service endpoints** - My frontend calls service end points in the back end using a fetch call and retrieves API calls in the backend and stored Username information.
+
+## DB/Login deliverable
+
+For this deliverable I stored user information and posts in the data base!
+**(Make sure you are logged in or it will not let you post!!)**
+
+ **MongoDB Atlas database created** - done! It works for both Simon and startup subdomains and stores both user and blog post data.
+ **Stores data in MongoDB** - Stores both Simon and Startup user data, and for the Startup it stores post data specifically.
+ **User registration** - Creates a new account in the database for both Simon and startup domains. In addition, it in crypts the user and provides an authentication token.
+ **existing user** - Allows for current user authentication, so users can re login without having to create a new account.
+ **Use MongoDB to store credentials** - Stores both users and posts. ????
+ **Restricts functionality** - You can not post a blog post until you have logged in and are authenicated with a unique token.
+ 
+## WebSocket deliverable
+
+For this deliverable I used webSocket to update the posts by otehr users on the frontend in realtime!
+
+ **Backend listens for WebSocket connection** - Backend listens for multiple user post data!
+ **Frontend makes WebSocket connection** - Client 1 can see Client 2's post data from the websocket.
+ **Data sent over WebSocket connection** - Post data from another user is sent over the websocket.
+ **WebSocket data displayed** - All user posts display in realtime. I tested this by having two windows open on two seperate accounts and seeing if the posts update in real time.
