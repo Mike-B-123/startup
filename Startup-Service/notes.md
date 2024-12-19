@@ -538,3 +538,372 @@ function Droppedpizza(order) {
 # React
 - React components are regular JavaScript functions, but their names **must** start with a capital letter or they won’t work!
 
+# Final Review
+
+**What is the default port for HTTP/HTTPS/SSH?**
+- Http = 80
+- HTTPS = 443
+- SSH = 22
+**What does an HTTP status code in the range of 300/400/500 indicate?**
+- 300 = Multiple Choices redirection response status code indicates that the request has more than one possible response
+- 400 = the server couldn't process the request because of a client error
+- 500 = Internal service error which means the program crashed
+**What does the HTTP header content-type allow you to do?**
+  - Indicate the original media type before coding takes place
+**What does a “Secure cookie”/”Http-only cookie”/”Same-site cookie” do? https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies**
+- Secure cookie: Sent to the server with an encrypted request over an HTTPS
+- Http-only: Prevents clients from capturing data stored on the cookie.
+- Same-site cookie: The SameSite attribute lets servers specify whether/when cookies are sent with cross-site requests — i.e. third-party cookies. 
+**Assuming the following Express middleware, what would be the console.log output for an HTTP GET request with a URL path of /api/document?**
+  - The response from that specific URL in the backend. Maybe the whole document if that is the respone.
+**Given the following Express service code: What does the following front end JavaScript that performs a fetch return?**
+- 
+Given the following MongoDB query, select all of the matching documents {name:Mark}
+**How should user passwords be stored?**
+  - const passwordHash = await bcrypt.hash(password, 10);
+**What is the websocket protocol intended to provide?**
+- Allows two way communication in real time between a client and the server. Not between two clients directly
+  
+**What do the following acronyms stand for? JSX, JS, AWS, NPM, NVM**
+- JSX: JavaScript XML, which is javascript with React
+- JS: Javascript
+- AWS: Amazon Web Service
+- NPM: Node Package Manager used to install and manage libraries
+- NVM: Node Version Manager which allows you to manage different versions of Node.js on s single machine.
+**What does a React component with React.useState do?**
+  - The useState hook is a way to declare and manage state variables within a functional component, enabling your component to react to changes in data and re-render when necessary
+**What are React Hooks used for?**
+- When we need to update and rerender a variable
+What does the following do?
+- State Hook: allows you to add and manage state in a functional component. Before hooks, only class components could manage state
+- Context Hook: allows you to access and consume values stored in a React Context directly in functional components.
+- Ref Hook: Allows you to create and manage references to DOM elements or mutable variables that persist across renders
+- Effect Hook: Allows you to perform side effects in your functional components. Side effects are operations that occur as a result of a component's render, such as fetching data, subscribing to external events, or directly interacting with the DOM
+- Preformance Hook: Helps optimize preformance and only renders neccsary parts of your code.
+What does the package.json file do?
+- package.json: It is a configuration file and manages dependiences and configuration
+**What does the fetch function do?**
+- fetch: sends a request and get a response from a specific backend URL. It can also send data
+**What does node.js do?**
+- Allows programmers to run javascript on a server and not just the web browser
+**What does pm2 do?**
+  - it is a process manager and it monitors and manages node.js applications
+**What does Vite do?**
+- bundles code, updates browser automatically and makes development easier and is popular for React.
+
+database:
+const { MongoClient } = require('mongodb');
+const bcrypt = require('bcrypt');
+const uuid = require('uuid');
+const config = require('./dbConfig.json');
+
+const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostname}`;
+const client = new MongoClient(url);
+const db = client.db('startup');
+const userCollection = db.collection('user');
+const blogpostCollection = db.collection('blogpost');
+
+
+// This will asynchronously test the connection and exit the process if it fails
+(async function testConnection() {
+  await client.connect();
+  await db.command({ ping: 1 });
+})().catch((ex) => {
+  console.log(`Unable to connect to database with ${url} because ${ex.message}`);
+  process.exit(1);
+});
+
+function getUser(email) {
+  return userCollection.findOne({ email: email });
+}
+
+function getUserByToken(token) {
+  return userCollection.findOne({ token: token });
+}
+
+async function createUser(email, password) {
+  // Hash the password before we insert it into the database
+  const passwordHash = await bcrypt.hash(password, 10);
+
+  const user = {
+    email: email,
+    password: passwordHash,
+    token: uuid.v4(),
+  };
+  await userCollection.insertOne(user);
+
+  return user;
+} 
+
+async function addBlogPost(blogPost) {
+  return blogpostCollection.insertOne(blogPost);
+}
+
+function getBlogPost() {
+  const query = {};
+  const cursor = blogpostCollection.find(query);
+  return cursor.toArray();
+}
+
+
+
+
+module.exports = {
+  getUser,
+  getUserByToken,
+  createUser,
+  addBlogPost,
+  getBlogPost,
+};
+
+Index:
+const cookieParser = require('cookie-parser');
+const bcrypt = require('bcrypt');
+const express = require('express');
+const app = express();
+const DB = require('./database.js');
+const { peerProxy } = require('./peerProxy.js');
+
+const authCookieName = 'token';
+
+// The service port may be set on the command line
+const port = process.argv.length > 2 ? process.argv[2] : 4000;
+
+// JSON body parsing using built-in middleware
+app.use(express.json());
+
+// Use the cookie parser middleware for tracking authentication tokens
+app.use(cookieParser());
+
+// Serve up the applications static content
+app.use(express.static('public'));
+
+// Trust headers that are forwarded from the proxy so we can determine IP addresses
+app.set('trust proxy', true);
+
+// Router for service endpoints
+const apiRouter = express.Router();
+app.use(`/api`, apiRouter);
+
+// CreateAuth token for a new user
+apiRouter.post('/auth/create', async (req, res) => {
+  if (await DB.getUser(req.body.email)) {
+    res.status(409).send({ msg: 'Existing user' });
+  } else {
+    const user = await DB.createUser(req.body.email, req.body.password);
+
+    // Set the cookie
+    setAuthCookie(res, user.token);
+
+    res.send({
+      id: user._id,
+    });
+  }
+});
+
+// GetAuth token for the provided credentials
+apiRouter.post('/auth/login', async (req, res) => {
+  const user = await DB.getUser(req.body.email);
+  if (user) {
+    if (await bcrypt.compare(req.body.password, user.password)) {
+      setAuthCookie(res, user.token);
+      res.send({ id: user._id });
+      return;
+    }
+  }
+  res.status(401).send({ msg: 'Unauthorized' });
+});
+
+// DeleteAuth token if stored in cookie
+apiRouter.delete('/auth/logout', (_req, res) => {
+  res.clearCookie(authCookieName);
+  res.status(204).end();
+});
+
+// secureApiRouter verifies credentials for endpoints
+const secureApiRouter = express.Router();
+apiRouter.use(secureApiRouter);
+
+secureApiRouter.use(async (req, res, next) => {
+  const authToken = req.cookies[authCookieName];
+  const user = await DB.getUserByToken(authToken);
+  if (user) {
+    next();
+  } else {
+    res.status(401).send({ msg: 'Unauthorized' });
+  }
+});
+
+
+// Default error handler
+app.use(function (err, req, res, next) {
+  res.status(500).send({ type: err.name, message: err.message });
+});
+
+// Return the application's default page if the path is unknown
+app.use((_req, res) => {
+  res.sendFile('index.html', { root: 'public' });
+});
+
+// setAuthCookie in the HTTP response
+function setAuthCookie(res, authToken) {
+  res.cookie(authCookieName, authToken, {
+    secure: true,
+    httpOnly: true,
+    sameSite: 'strict',
+  });
+}
+
+apiRouter.get('/quote/response', (_req, res) => { 
+  fetch('https://zenquotes.io/api/random') 
+  .then((response) => response.json())
+  .then((data) => {
+        res.send({q: data[0]['q'], a: data[0]['a']});
+      })
+      .catch();
+  }, []);
+
+  // Get Posts
+secureApiRouter.get('/multiple', async (req, res) => {
+  const multipleblogPosts = await DB.getBlogPost();
+  console.log(multipleblogPosts)
+  res.send(multipleblogPosts);
+});
+
+// Submit Post
+secureApiRouter.post('/blogPost', async (req, res) => {
+  const blogPost = { post: req.body["post"], ip: req.ip };
+  await DB.addBlogPost(blogPost);
+  const multipleblogPosts = await DB.getBlogPost();
+  res.send(multipleblogPosts);
+});
+
+const httpService = app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
+});
+
+peerProxy(httpService);
+
+Japan:
+import React from 'react';
+import './Japan.css';
+
+export function Japan(props) {
+  const [multipleblogPosts, setmultipleBlogposts] = React.useState([]);
+  const [socketblogPosts, setsocketblogPosts] = React.useState([]);
+  const [quote, setQuote] = React.useState('Quote Here!');
+  const [author, setQuoteAuthor] = React.useState('Quote Author Here!');
+  
+  // might have to get rid of description API
+  // We only want this to render the first time the component is created and so we provide an empty dependency list.
+  // Adjust the webSocket protocol to what is being used for HTTP
+const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+const socket = new WebSocket(`${protocol}://${window.location.host}/ws`);
+
+function appendMsg(msg) {
+  setsocketblogPosts(old=>[...old, JSON.parse(msg)]);
+}
+
+function sendMessage(txt) {
+  if (!!txt) {
+    const out = `{"post":"${txt}"}`;
+    // Append the message to out own list of web socket messages
+    // appendMsg(out);
+    // Notify the websocket with our new message
+    socket.send(out);
+  }
+}
+// Display that we have opened the webSocket
+  React.useEffect(() => {
+    socket.onopen = (event) => {};
+
+    socket.onmessage = async (event) => {
+      const text = await event.data.text();
+      // Append messages we recieved from the websocket(internet)
+      appendMsg(text);
+    };
+
+    socket.onclose = (event) => {
+      socket.send(`{"post":"Somebody has left the field"}`)
+      console.log("heelllo")
+      appendMsg(`{"post":"You are gone..."}`)
+    };
+  }, []);
+
+  React.useEffect(() => {
+    const random = Math.floor(Math.random() * 1000);
+    fetch('/api/quote/response') 
+      .then((response) => response.json())
+      .then((data) => {
+        // console.log(data)
+        setQuote(data['q']);
+        setQuoteAuthor(data['a']);
+      })
+      .catch();
+  }, []);
+
+  // This actually gets our blog posts
+  React.useEffect(() => {
+    fetch('/api/multiple')
+      .then((response) => response.json())
+      .then((multipleblogPosts) => {
+        console.log(multipleblogPosts)
+        setmultipleBlogposts(multipleblogPosts);
+        setsocketblogPosts([]);
+      });
+  }, []);
+
+  async function savePost(blogPost) {
+    const newPost = {post: blogPost};
+
+    await fetch('/api/blogPost', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(newPost),
+    }
+  )};
+
+  return (
+    <main className="container-fluid bg-secondary text-center"> 
+    <section>
+    <h1>Japan</h1>
+<img className="img-fluid rounded" src="https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg" alt="Image of Japan" width="125" height="100"></img>
+      <p>Some fun facts about Japan: 
+      <br/> Japan is actually made up of 6,582 islands, but only about 430 are inhabited. The largest islands are Kyushu, Hokkaido, Shikoku, and Honshu.
+      <br/>Lastly, Japan is known for their high speed "bullet trains" and their punctuality, with an average delay of only 18 seconds. Try riding one next time you go! 
+      </p>
+    <hr />
+      </section>
+      <section>
+  <h2>Atlas's Recommendations</h2>
+  <img className="img-fluid rounded" src="https://heronscrossing.vet/wp-content/uploads/Golden-Retriever.jpg" alt="Golden-Retriever Image" width="125" height="100"></img>
+<p> {quote} - {author}</p>
+      <p>Our mascot Atlas recommends you try to go to Mount Fuji on your next visit to South Korea!
+      <br/>Mount Fuji is Japan's highest peak, which is also the world's most climbed mountain. Happy adventuring! </p>
+          <hr />
+          <div > 
+          {multipleblogPosts.length > 0 ? (
+           multipleblogPosts.map((post, index) => <li key={index}>{post["post"]}</li>)
+            ) : (
+          <p>No Data Available</p>
+              )}
+          {socketblogPosts.length > 0 && socketblogPosts.map((post, index) => <li key={index}>{post["post"]}</li>)}
+          </div>
+        <hr />
+        <div className="mb-3">
+          <label for="Enter your Bucket List post here" className="form-label"> Enter your Bucket List post below!</label>
+          <textarea class="form-control" id="Enter your Bucket List post here" rows="3"></textarea>
+        </div>
+        <button onClick={() => {
+            // Prevent page reload
+          const inputValue = document.getElementById('Enter your Bucket List post here').value;
+          savePost(inputValue);
+          sendMessage(inputValue);
+           }} className="btn btn-primary" type="submit">Submit</button>
+        </section>
+      </main>
+  );
+}
+
+
+
