@@ -545,7 +545,7 @@ function Droppedpizza(order) {
 - HTTPS = 443
 - SSH = 22
 **What does an HTTP status code in the range of 300/400/500 indicate?**
-- 300 = Multiple Choices redirection response status code indicates that the request has more than one possible response
+- 300 = Multiple Choices redirection response status code represnts request has more than one possible response
 - 400 = the server couldn't process the request because of a client error
 - 500 = Internal service error which means the program crashed
 **What does the HTTP header content-type allow you to do?**
@@ -553,7 +553,7 @@ function Droppedpizza(order) {
 **What does a “Secure cookie”/”Http-only cookie”/”Same-site cookie” do? https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies**
 - Secure cookie: Sent to the server with an encrypted request over an HTTPS
 - Http-only: Prevents clients from capturing data stored on the cookie.
-- Same-site cookie: The SameSite attribute lets servers specify whether/when cookies are sent with cross-site requests — i.e. third-party cookies. 
+- Same-site cookie: Limits the sharing of cookies across websites to limit security risk and Cross-Site Request Forgery (CSRF) attacks 
 **Assuming the following Express middleware, what would be the console.log output for an HTTP GET request with a URL path of /api/document?**
   - The response from that specific URL in the backend. Maybe the whole document if that is the respone.
 **Given the following Express service code: What does the following front end JavaScript that performs a fetch return?**
@@ -571,16 +571,16 @@ Given the following MongoDB query, select all of the matching documents {name:Ma
 - NPM: Node Package Manager used to install and manage libraries
 - NVM: Node Version Manager which allows you to manage different versions of Node.js on s single machine.
 **What does a React component with React.useState do?**
-  - The useState hook is a way to declare and manage state variables within a functional component, enabling your component to react to changes in data and re-render when necessary
+  - The useState hook is a way to declare and manage state variables changing data and re rendering when needed
 **What are React Hooks used for?**
 - When we need to update and rerender a variable
 What does the following do?
 - State Hook: allows you to add and manage state in a functional component. Before hooks, only class components could manage state
-- Context Hook: allows you to access and consume values stored in a React Context directly in functional components.
+- Context Hook: allows you to access and consume data stored in a React Context directly in functional components.
 - Ref Hook: Allows you to create and manage references to DOM elements or mutable variables that persist across renders
-- Effect Hook: Allows you to perform side effects in your functional components. Side effects are operations that occur as a result of a component's render, such as fetching data, subscribing to external events, or directly interacting with the DOM
+- Effect Hook: Allows you to perform side effects in your functional components. Side effects are operations from rendering
 - Preformance Hook: Helps optimize preformance and only renders neccsary parts of your code.
-What does the package.json file do?
+**What does the package.json file do?**
 - package.json: It is a configuration file and manages dependiences and configuration
 **What does the fetch function do?**
 - fetch: sends a request and get a response from a specific backend URL. It can also send data
